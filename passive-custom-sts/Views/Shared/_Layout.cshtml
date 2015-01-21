@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport'>
+    <meta content='Telefonica I+D is headquartered in Madrid but focuses on global, technical innovation trends. Its research team cover multimedia, internet, connectivity and more.' name='description'>
+    <meta content='innovation, "telefonica innovation", TID, "technical innovation", research, R&D, "innovation trends", I+D, firefox os, fi-ware, IoT, M2M, BeWifi' name='keywords'>	<!-- metadata -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>@ViewBag.Title</title>
+
+    <link href="@Url.Content("~/Content/font-awesome/css/font-awesome.css")" media="screen" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/theme/stylesheets/animate_animo.css")" media="screen" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/theme/stylesheets/bootstrap.css")" media="screen" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/theme/stylesheets/fonts.css")" media="screen" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/theme/stylesheets/application.css")" media="screen" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/theme/stylesheets/mobile.css")" media="screen" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/theme/stylesheets/responsive-nav.css")" media="screen" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/zocial-css/zocial.css")" media="screen" rel="stylesheet" type="text/css" />
+        
+    <meta name="csrf-param" content="authenticity_token">
+    <meta name="csrf-token" content="GFWbuG8p2adrm6yvcnbZ73nzVPfVwqQAlAqz5+eeK64=">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script type="text/javascript"> (function () { var po = document.createElement("script"); po.type = "text/javascript"; po.async = true; po.src = "https://apis.google.com/js/plusone.js?publisherid=111995902593302032147"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(po, s); })(); </script>
+
+    <script type="text/javascript" src="@Url.Content("~/Content/jquery.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/angular.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/angular-sanitize.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/theme/javascripts/animo.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/theme/javascripts/bootstrap.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/theme/javascripts/vendor.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/theme/javascripts/jquery.cycle2.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/theme/javascripts/jquery.cycle2.swipe.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/theme/javascripts/responsive-nav.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/theme/javascripts/main.js")"></script>
+    <!-- page title -->
+</head>
+<body>
+
+    <div id="body-background"><div class="gradient"></div></div>
+
+
+    <div id="main-content">
+        <header class="container">
+            <div class="row">
+                <div class="span24 thin">
+
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="span24 logos">
+                    <div id="logo-tid">
+                        <a href="http://www.tid.es">
+                            <img src="@Url.Content("~/Content/theme/images/logo-tid-en.png")">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </header>
+        <section class="container centerblock">
+            <div class="row">
+                <div class="span18 offset3">
+                    @RenderBody()
+                </div>
+            </div>
+        </section>
+
+        <footer class="container">
+            <div class="row">
+                <div class="span24 thin">
+                    <span class="signature">&copy; 2014 Telefonica Research and Innovation</span>
+
+                    <div class='share pull-right'>
+                        <ul>
+                            <li class="twitter"><a href="https://twitter.com/telefonicaid" target="_blank"><i class="icon-twitter"></i></a></li>
+                            <li class="linkedin"><a href="http://uk.linkedin.com/company/telef-nica-digital" target="_blank"><i class="icon-linkedin"></i></a></li>
+                            <li class="facebook"><a href="https://www.facebook.com/telefonicaid" target="_blank"><i class="icon-facebook"></i></a></li>
+                            <li class="github"><a href="https://github.com/telefonicaid" target="_blank"><i class="icon-github-alt"></i></a></li>
+                            <li class="youtube"><a href="https://www.youtube.com/telefonicadigital" target="_blank"><i class="icon-youtube"></i></a></li>
+                            <li class="email"><a href="http://www.tid.es/work-with-us/contact-us" target="_blank">@@<a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        @RenderSection("scripts", required: false)
+</body>
+</html>

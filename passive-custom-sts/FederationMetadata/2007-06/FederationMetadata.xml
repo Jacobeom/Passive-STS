@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<EntityDescriptor xmlns="urn:oasis:names:tc:SAML:2.0:metadata" ID="_1a1605e6-f5b6-4cf0-b2c3-c5733a4f54b7" entityID="https://stswebsite.tid.es:798">
+  <RoleDescriptor xmlns:fed="http://docs.oasis-open.org/wsfed/federation/200706" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="fed:SecurityTokenServiceType" protocolSupportEnumeration="http://docs.oasis-open.org/wsfed/federation/200706" ServiceDescription="https://stswebsite.tid.es:798">
+    <KeyDescriptor use="signing">
+      <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+        <X509Data>
+          <X509Certificate>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</X509Certificate>
+        </X509Data>
+      </KeyInfo>
+    </KeyDescriptor>
+    <ContactPerson contactType="administrative">
+      <GivenName>Jacobo Marcos</GivenName>
+    </ContactPerson>
+    <fed:ClaimTypesOffered>
+      <auth:ClaimType Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name" Optional="true" xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706">
+        <auth:DisplayName>Name</auth:DisplayName>
+        <auth:Description>The name of the subject.</auth:Description>
+      </auth:ClaimType>
+      <auth:ClaimType Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authentication" Optional="true" xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706">
+        <auth:DisplayName>Authentication</auth:DisplayName>
+        <auth:Description>The authentication of the subject.</auth:Description>
+      </auth:ClaimType>
+    </fed:ClaimTypesOffered>
+    <fed:PassiveRequestorEndpoint>
+      <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+        <Address>https://stswebsite.tid.es:798/</Address>
+      </EndpointReference>
+    </fed:PassiveRequestorEndpoint>
+  </RoleDescriptor>
+</EntityDescriptor>

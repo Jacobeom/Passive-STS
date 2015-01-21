@@ -1,0 +1,61 @@
+/*! responsive-nav.js v1.0.20 by @viljamis */
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 979px) { 
+
+  #nav ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    list-style: none;
+  }
+
+  #nav li {
+    width: 100%;
+    display: block;
+    border-left: none !important;
+  }
+
+  .js #nav {
+    clip: rect(0 0 0 0);
+    max-height: 0;
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    zoom: 1;
+  }
+
+  #nav.opened {
+    max-height: 9999px;
+  }
+
+   .js #nav {
+    position: relative;
+    margin-left: 0 !important;
+  }
+  .js #nav.closed {
+    max-height: none;
+  }
+  #nav-toggle {
+    display: none;
+  }
+
+  #nav ul li.on ul{
+    position: static !important;
+    width: 100% !important;
+    opacity: 1 !important;
+  }
+}
+
+@media screen and (min-width: 40em) {
+ 
+}
