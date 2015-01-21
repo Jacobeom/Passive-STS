@@ -1,0 +1,143 @@
+﻿@model passive_custom_sts.Models.LoginViewModel
+
+@{
+    ViewBag.Title = "Associate Account";
+}
+
+<style type="text/css">
+    li {
+        list-style-type: none;
+    }
+
+    .validation-summary-errors {
+        text-align: center;
+        font-size: 17.5px;
+        color: red;
+    }
+
+    .error {
+        color: red;
+    }
+
+    .table-form {
+        display: table;
+        border-collapse: collapse;
+        width: 80%;
+        min-height: 100%;
+        margin: 0 auto;
+    }
+
+    .row-form {
+        display: table-row;
+        border: 5px solid transparent;
+    }
+
+    .column-center {
+        text-align: center;
+    }
+
+    .column-left, .column-rigth {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .column-left {
+        width: 20%;
+    }
+
+    .column-rigth {
+        width: 65%;
+    }
+
+    .cv-agreement {
+        padding: 10px;
+        position: relative;
+        width: 100%;
+    }
+
+    .cv-agreement-label {
+        padding-left: 5px;
+    }
+
+    .cv-agreement-label-explanation {
+        color: #999999;
+        padding-top: 10px;
+        text-align: justify;
+        font-size: 80%;
+    }
+
+    .multiselect-container {
+        position: absolute;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+        .multiselect-container input[type="text"] {
+            width: 70%;
+        }
+
+        .multiselect-container .input-prepend {
+            padding: 3px;
+        }
+
+        .multiselect-container > li {
+            padding: 0;
+        }
+
+            .multiselect-container > li > label {
+                margin: 0;
+                padding: 3px 20px 3px 20px;
+                height: 100%;
+                cursor: pointer;
+            }
+
+                .multiselect-container > li > label.multiselect-header {
+                    margin: 0;
+                    padding: 3px 20px 3px 20px;
+                    height: 100%;
+                }
+
+                .multiselect-container > li > label > input[type="checkbox"] {
+                    margin-bottom: 5px;
+                }
+</style>
+
+<h1><b> Associate External Account to your AD User </b></h1>
+<h4 class="lead">Please in order to autenticate you with the <i>Telefónica I+D corporative user</i> systems we do need to associate your current external account with your Telefónica I+D user account.<br /> <i>Note that this step will be only performed once</i></h4>
+<br />
+@using (Html.BeginForm("AssociateAccount", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form" }))
+{
+    @Html.ValidationSummary(false)
+    @Html.AntiForgeryToken()
+
+    <div class="table-form">
+        <div class="row-form">
+            <div class="column-left">
+                <h4> Login <span style="color: red"> *</span></h4>
+            </div>
+            <div class="column-rigth">
+                @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", @style = "width: 100%", @required = "", @pattern = "^.*\\S+.*$", @title = "Fill your login account" })
+                @Html.ValidationMessageFor(m => m.UserName)
+            </div>
+        </div>
+        <div class="row-form">
+            <div class="column-left">
+                <h4> Password <span style="color: red"> *</span> </h4>
+            </div>
+            <div class="column-rigth">
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control", @style = "width: 100%", @required = "", @title = "Fill your login passoword" })
+                @Html.ValidationMessageFor(m => m.Password)
+            </div>
+        </div>
+    </div>
+    <div class="table-form column-center" style="padding-top: 10px;">
+        <input type="submit" name="ApplyButton" value="Associate Account" class="btn btn-default" />
+    </div>
+}
+<br />
+<br />
+
+@section Scripts {
+
+}

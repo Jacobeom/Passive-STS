@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<h1><b>Choose an External Authentication System</b></h1>
+
+@using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }))
+{
+        @Html.AntiForgeryToken()
+        <div id="socialLoginList">
+            <p>
+               
+                <button style="margin:10px" type="submit" class="zocial googleplus" id="GoogleOpenIdConnect" name="provider" value="GoogleOpenIdConnect" title="Log in using your Google Account">Sign in with Google+</button>
+                <br />
+                <button style="margin: 10px" type="submit" class="zocial twitter" id="Twitter" name="provider" value="Twitter" title="Log in using your Twitter Account">Sign in with Twitter</button>
+                <br />
+                <button style="margin: 10px" type="submit" class="zocial linkedin" id="LinkedIn" name="provider" value="LinkedIn" title="Log in using your LinkedIn Account">Sign in with LinkedIn</button>
+                <br />
+                <button style="margin: 10px" type="submit" class="zocial github" id="GitHub" name="provider" value="GitHub" title="Log in using your GitHub Account">Sign in with GitHub</button>
+                <br />
+                <button style="margin: 10px" type="submit" class="zocial mobileconnect" id="MobileOpenIdConnect" name="provider" value="MobileOpenIdConnect" title="Login with Mobile Connect">Login with Mobile Connect</button>
+                <br />
+                <br />
+                <br />
+                <br />
+            </p>
+        </div>
+}

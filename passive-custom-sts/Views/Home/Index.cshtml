@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h1><b>Custom Security Token Service Provider</b></h1>
+
+<h4 class="lead">
+    You already log in! To use this service in conjuntion with a <i>WS-Federation Version 1.2 requestor.</i><br />
+    At least you neeed to use the parameters <i>wa</i>, <i>wtrealm</i> and <i>wctx</i> to make it work.
+</h4>
+
+<h4> Example: </h4>
+<i>
+    <font size="3" color="blue">
+        https://identity-provider.tid.es/?<b>wa</b>=wsignin1.0&<b>wtrealm</b>=urn:realm-identity&<b>wctx</b>=https://requestor.tid.es/Authenticate?Source=/</p>
+    </font>
+</i>
+<br />
+<br />
+<p><a href="http://docs.oasis-open.org/wsfed/federation/v1.2/os/ws-federation-1.2-spec-os.html#_Toc223175011" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
